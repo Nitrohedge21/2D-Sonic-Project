@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2d;
-    float directionX = 0f;
+    float directionX;
 
     // Animation stuff
     private Animator anim;
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private bool isTouchingRight;
     private bool wallJumping;
     private float touchingLeftOrRight;
+    bool facingRight = true;
     
     void Start()
     {
@@ -34,17 +35,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         directionX = Input.GetAxisRaw("Horizontal");
-        // Trying to make the player rotate to make it face the other side
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            transform.Rotate(0, 180, 0);
-        }
-        if(Input.GetKeyDown(KeyCode.D))
-        {
-            transform.Rotate(0, 0, 0);
-        }
-        
-        
+     
         if((!isTouchingLeft && !isTouchingRight) || isGrounded())
         {
             rigidbody2d.velocity = new Vector2(directionX * moveSpeed, rigidbody2d.velocity.y);
@@ -88,6 +79,14 @@ public class PlayerController : MonoBehaviour
         float extraHeightText = .5f;
         RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + extraHeightText, jumpableGround);
 
+        if(directionX < 0 && facingRight)
+        {
+            flip();
+        }
+        else if (directionX >0 && !facingRight)
+        {
+            flip();
+        }
 
         Color rayColor;
         if (raycastHit.collider != null)
@@ -106,6 +105,12 @@ public class PlayerController : MonoBehaviour
     void setJump2False()
     {
         wallJumping = false;
+    }
+
+    void flip()
+    {
+        facingRight = !facingRight;
+        transform.Rotate(0, 180, 0);
     }
 }
 
@@ -130,7 +135,6 @@ Debug.Log(raycastHit.collider);
 return raycastHit.collider != null;
 */
 
-
 // isGrounded using BoxCast
 /*
 float extraHeightText = 1f;
@@ -150,4 +154,16 @@ Debug.DrawRay(boxCollider2d.bounds.center - new Vector3(boxCollider2d.bounds.ext
 Debug.DrawRay(boxCollider2d.bounds.center - new Vector3(boxCollider2d.bounds.extents.x, boxCollider2d.bounds.extents.y + extraHeightText), Vector2.right * (boxCollider2d.bounds.extents.x * 2f), rayColor);
 Debug.Log(raycastHit.collider);
 return raycastHit.collider != null;
+*/
+
+// Personal attempt on flipping the player
+/*
+if (Input.GetKeyDown(KeyCode.A))
+{
+    transform.Rotate(0, 180, 0);
+}
+if (Input.GetKeyDown(KeyCode.D))
+{
+    transform.Rotate(0, 0, 0);
+}
 */
