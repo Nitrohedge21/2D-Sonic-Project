@@ -14,13 +14,18 @@ public class SpindashTest : MonoBehaviour
         playerController = rb2d.GetComponent<PlayerController>();
     }
 
-    
+    // Changed the isGrounded function to public to be able to access it in here.
+    // tried making it protected but couldn't figure out how to access it.
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.A) /*&& playerController.isGrounded()*/)
+        if(playerController.isGrounded() && Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.A))
         {
             rb2d.AddForce(transform.forward* thrust, ForceMode2D.Impulse);
             
+        }
+        else
+        {
+
         }
     }
 }

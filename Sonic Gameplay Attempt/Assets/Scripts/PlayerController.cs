@@ -7,10 +7,10 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2d;
     float directionX;
-
+    UpdateAnimations animUpdate;
     // Animation stuff
     private Animator anim;
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { standing, idleStart, idle, walk, buildSpeed, running, jump, roll, crouch, dead, drown, getHit, inAir,diving, lookUp,push, slowDown, turnLeft}
     private SpriteRenderer sprite;
 
     [Header("Required Stuff")]
@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
             rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
         }
 
+
         isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y), new Vector2(0.2f, 0.9f), 0f, jumpableGround);
         isTouchingRight = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + 0.5f, gameObject.transform.position.y), new Vector2(0.2f, 0.9f), 0f, jumpableGround);
 
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private bool isGrounded()
+    public bool isGrounded()
     {
         // Draws a line that stays green while it's grounded and turns red when it's not.
         // Got this part from coding monkey
@@ -111,6 +112,37 @@ public class PlayerController : MonoBehaviour
     {
         facingRight = !facingRight;
         transform.Rotate(0, 180, 0);
+    }
+
+    private void updateAnimations()
+    {
+        MovementState state;
+
+        if(directionX > 0f)
+        {
+            state = MovementState.walk;
+        }
+        else if (directionX < 0f)
+        {
+            state = MovementState.walk;
+        }
+
+        else
+        {
+            state = MovementState.standing;
+        }
+
+        if (rigidbody2d.velocity.y >.1f)
+        {
+            state = MovementState.jump;
+        }
+
+        else if(rigidbody2d.velocity.y < -.1f)
+        {
+            state = MovementState.diving;
+        }
+
+        anim.SetInteger("state",(int)state);
     }
 }
 
