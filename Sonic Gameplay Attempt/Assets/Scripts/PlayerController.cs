@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpHeight = 10f;
+    [SerializeField] private float maxSpeed = 15f;
     private bool isTouchingLeft;
     private bool isTouchingRight;
     private bool wallJumping;
@@ -39,6 +40,13 @@ public class PlayerController : MonoBehaviour
         if((!isTouchingLeft && !isTouchingRight) || isGrounded())
         {
             rigidbody2d.velocity = new Vector2(directionX * moveSpeed, rigidbody2d.velocity.y);
+            //The player gains speed over time instead of input, gonna try to figure out how to fix this.
+            //if(Input.GetAxisRaw("Horizontal"))
+            //moveSpeed += 0.1f;
+            if(moveSpeed > maxSpeed)
+            {
+                moveSpeed = maxSpeed;
+            }
         }
 
         // Putting isGrounded after the input makes the ray not show up for some reason.
@@ -70,6 +78,8 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody2d.velocity = new Vector2(moveSpeed * touchingLeftOrRight, jumpHeight);
         }
+
+        updateAnimations();
     }
 
     public bool isGrounded()
@@ -99,7 +109,7 @@ public class PlayerController : MonoBehaviour
             rayColor = Color.red;
         }
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + extraHeightText), rayColor);
-        Debug.Log(raycastHit.collider);
+        //Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
 
     }

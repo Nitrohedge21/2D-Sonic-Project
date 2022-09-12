@@ -6,28 +6,33 @@ public class SpindashTest : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     PlayerController playerController;
-    private float thrust = 1f;
+    private float dashSpeed = 1f;
 
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        playerController = rb2d.GetComponent<PlayerController>();
+        playerController = GetComponent<PlayerController>();
+        rb2d = playerController.GetComponent<Rigidbody2D>();
     }
 
     // Changed the isGrounded function to public to be able to access it in here.
     // tried making it protected but couldn't figure out how to access it.
     void Update()
     {
-        if(playerController.isGrounded() && Input.GetKeyDown(KeyCode.DownArrow) && Input.GetKeyDown(KeyCode.A))
+     
+        if(/*Input.GetKeyDown(KeyCode.DownArrow) &&*/ Input.GetKeyDown(KeyCode.Z) &&playerController.isGrounded())
         {
-            rb2d.AddForce(transform.forward* thrust, ForceMode2D.Impulse);
+            rb2d.AddForce(transform.forward* dashSpeed);
+            //The line above is not working because i can't reference the object's instance properly.
+            Debug.Log("Spindash input test");
             
-        }
-        else
-        {
-
         }
     }
 }
 
 //rb2d.GetComponent<PlayerController>.isGrounded();
+//playerController = rb2d.GetComponent<PlayerController>();
+//if(playerController.isGrounded())
+//{
+//    rb2d.AddForce(transform.forward * dashSpeed);
+//    Debug.Log("Test");
+//}
