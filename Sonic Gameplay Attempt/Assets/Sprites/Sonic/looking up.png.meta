@@ -124,12 +124,12 @@ TextureImporter:
       name: looking up_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 7
         y: 0
-        width: 28
-        height: 40
+        width: 32
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,10 +147,10 @@ TextureImporter:
         serializedVersion: 2
         x: 56
         y: 0
-        width: 29
+        width: 32
         height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,36 +163,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: looking up_2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 0
-        width: 29
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f426299c52ac9820800000000000000
-      internalID: 2926392376474084600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: looking up_3
       rect:
         serializedVersion: 2
-        x: 155
+        x: 104
         y: 0
-        width: 28
+        width: 32
         height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +187,12 @@ TextureImporter:
       name: looking up_4
       rect:
         serializedVersion: 2
-        x: 204
+        x: 152
         y: 0
-        width: 28
+        width: 32
         height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -226,22 +205,43 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: looking up_5
+      name: looking up_6
       rect:
         serializedVersion: 2
-        x: 252
+        x: 201
         y: 0
-        width: 29
+        width: 32
         height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9083b4372e870170800000000000000
-      internalID: 8144634750161879195
+      spriteID: 7d33946a95c2a1270800000000000000
+      internalID: 8221932833271788503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: looking up_7
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539d2e156bc825a50800000000000000
+      internalID: 6508419126189545781
       vertices: []
       indices: 
       edges: []

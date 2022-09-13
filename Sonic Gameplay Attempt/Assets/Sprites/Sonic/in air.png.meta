@@ -112,12 +112,12 @@ TextureImporter:
       name: in air_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 9
         y: 0
-        width: 24
+        width: 30
         height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,12 +133,12 @@ TextureImporter:
       name: in air_1
       rect:
         serializedVersion: 2
-        x: 61
+        x: 58
         y: 0
-        width: 24
-        height: 43
+        width: 30
+        height: 44
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

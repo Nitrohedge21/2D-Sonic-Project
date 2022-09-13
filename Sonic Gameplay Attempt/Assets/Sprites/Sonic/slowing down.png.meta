@@ -29,6 +29,12 @@ TextureImporter:
   - first:
       213: 9155798142884331559
     second: slowing down_8
+  - first:
+      213: 2405207146804178734
+    second: slowing down_10
+  - first:
+      213: -8186925009541282644
+    second: slowing down_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,12 +139,12 @@ TextureImporter:
       name: slowing down_0
       rect:
         serializedVersion: 2
-        x: 11
+        x: 4
         y: 1
-        width: 26
-        height: 37
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +160,12 @@ TextureImporter:
       name: slowing down_1
       rect:
         serializedVersion: 2
-        x: 59
+        x: 54
         y: 1
-        width: 26
-        height: 37
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,36 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowing down_2
-      rect:
-        serializedVersion: 2
-        x: 108
-        y: 1
-        width: 31
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b06cb71822c9f8850800000000000000
-      internalID: 6381490869022475787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: slowing down_3
       rect:
         serializedVersion: 2
-        x: 155
+        x: 103
         y: 1
-        width: 35
-        height: 36
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +202,12 @@ TextureImporter:
       name: slowing down_4
       rect:
         serializedVersion: 2
-        x: 202
+        x: 154
         y: 1
         width: 36
-        height: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,36 +220,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slowing down_5
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 1
-        width: 35
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 281fc29897366bbf0800000000000000
-      internalID: -308950150784683646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: slowing down_6
       rect:
         serializedVersion: 2
-        x: 302
-        y: 2
-        width: 32
-        height: 35
+        x: 202
+        y: 1
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,12 +244,12 @@ TextureImporter:
       name: slowing down_7
       rect:
         serializedVersion: 2
-        x: 352
+        x: 249
         y: 1
-        width: 31
-        height: 36
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,12 +265,12 @@ TextureImporter:
       name: slowing down_8
       rect:
         serializedVersion: 2
-        x: 398
-        y: 2
-        width: 34
-        height: 35
+        x: 298
+        y: 1
+        width: 36
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -314,6 +278,48 @@ TextureImporter:
       bones: []
       spriteID: 7204dc5c6edef0f70800000000000000
       internalID: 9155798142884331559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slowing down_10
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f6e7c1823016120800000000000000
+      internalID: 2405207146804178734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slowing down_11
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 1
+        width: 36
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4c78b7413326e80800000000000000
+      internalID: -8186925009541282644
       vertices: []
       indices: 
       edges: []

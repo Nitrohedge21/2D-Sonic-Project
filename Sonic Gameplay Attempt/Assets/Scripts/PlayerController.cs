@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpHeight = 10f;
     [SerializeField] private float maxSpeed = 15f;
+    [SerializeField] private float minSpeed = 10f;
+
     private bool isTouchingLeft;
     private bool isTouchingRight;
     private bool wallJumping;
@@ -41,9 +43,21 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody2d.velocity = new Vector2(directionX * moveSpeed, rigidbody2d.velocity.y);
             //The player gains speed over time instead of input, gonna try to figure out how to fix this.
-            //if(Input.GetAxisRaw("Horizontal"))
-            //moveSpeed += 0.1f;
-            if(moveSpeed > maxSpeed)
+            if (Input.GetAxisRaw("Horizontal") != 0)
+            {
+                //Added != 0 here so that i could use bool in an if statement. Thanks to logicandchaos from Unity answers.
+                moveSpeed += 0.1f;
+            }
+            else
+            {
+                moveSpeed -= 0.1f;
+            }
+            
+            if(moveSpeed < minSpeed)
+            {
+                moveSpeed = minSpeed;
+            }
+            if (moveSpeed > maxSpeed)
             {
                 moveSpeed = maxSpeed;
             }
@@ -55,9 +69,9 @@ public class PlayerController : MonoBehaviour
             rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
         }
 
-
-        isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y), new Vector2(0.2f, 0.9f), 0f, jumpableGround);
-        isTouchingRight = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + 0.5f, gameObject.transform.position.y), new Vector2(0.2f, 0.9f), 0f, jumpableGround);
+        // If you ever change the box collider of the player, adjust the x float value of the new vector2s.
+        isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y), new Vector2(0.5f, 0.9f), 0f, jumpableGround);
+        isTouchingRight = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + 0.5f, gameObject.transform.position.y), new Vector2(0.5f, 0.9f), 0f, jumpableGround);
 
         if (isTouchingLeft)
         {
@@ -142,16 +156,30 @@ public class PlayerController : MonoBehaviour
             state = MovementState.standing;
         }
 
-        if (rigidbody2d.velocity.y >.1f)
+        if (rigidbody2d.velocity.y >.1f && !isGrounded())
         {
             state = MovementState.jump;
         }
 
-        else if(rigidbody2d.velocity.y < -.1f)
+        else if(rigidbody2d.velocity.y < -.1f && !isGrounded())
         {
             state = MovementState.diving;
         }
 
+        if(isTouchingLeft && isGrounded()/* && Input.GetKeyDown(KeyCode.LeftArrow)*/)
+        {
+            //Needs more work, especially with the collision.
+            state = MovementState.push;
+        }
+
+        if (isTouchingRight && isGrounded() /*&& Input.GetKeyDown(KeyCode.RightArrow)*/)
+        {
+            state = MovementState.push;
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow) && isGrounded())
+        {
+            state = MovementState.crouch;
+        }
         anim.SetInteger("state",(int)state);
     }
 }

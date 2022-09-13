@@ -50,6 +50,30 @@ TextureImporter:
   - first:
       213: -2321358751167358505
     second: rolling_15
+  - first:
+      213: 8955903998551638466
+    second: rolling_16
+  - first:
+      213: -5707000653447680791
+    second: rolling_17
+  - first:
+      213: 8843757843381286151
+    second: rolling_18
+  - first:
+      213: -4947045052046799192
+    second: rolling_19
+  - first:
+      213: -4577978656705408200
+    second: rolling_20
+  - first:
+      213: -4838852722394473721
+    second: rolling_21
+  - first:
+      213: -7477853186884410659
+    second: rolling_22
+  - first:
+      213: -2635621326712797544
+    second: rolling_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -154,10 +178,10 @@ TextureImporter:
       name: rolling_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 5
-        width: 30
-        height: 30
+        x: 8
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,34 +196,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rolling_1
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 5
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f6ab69f293704960800000000000000
-      internalID: 7584188847578916601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: rolling_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 5
-        width: 29
-        height: 30
+        x: 57
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +220,10 @@ TextureImporter:
       name: rolling_3
       rect:
         serializedVersion: 2
-        x: 156
-        y: 5
-        width: 29
-        height: 31
+        x: 106
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,34 +238,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rolling_4
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 5
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd671e4f55c2f1ae0800000000000000
-      internalID: -1576492596864125221
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: rolling_5
       rect:
         serializedVersion: 2
-        x: 254
-        y: 5
-        width: 30
-        height: 30
+        x: 155
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -280,10 +262,10 @@ TextureImporter:
       name: rolling_6
       rect:
         serializedVersion: 2
-        x: 303
-        y: 7
-        width: 30
-        height: 29
+        x: 204
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -298,34 +280,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rolling_7
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 6
-        width: 31
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18c22402c05bef600800000000000000
-      internalID: 504039271997516929
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: rolling_8
       rect:
         serializedVersion: 2
-        x: 401
-        y: 5
-        width: 30
-        height: 30
+        x: 253
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -343,10 +304,10 @@ TextureImporter:
       name: rolling_9
       rect:
         serializedVersion: 2
-        x: 450
-        y: 5
-        width: 30
-        height: 30
+        x: 302
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -361,34 +322,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rolling_10
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 6
-        width: 29
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 38665a1b8f8560130800000000000000
-      internalID: 3532608782874273411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: rolling_11
       rect:
         serializedVersion: 2
-        x: 548
-        y: 5
-        width: 29
-        height: 31
+        x: 352
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,34 +343,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rolling_12
-      rect:
-        serializedVersion: 2
-        x: 597
-        y: 5
-        width: 30
-        height: 30
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 814323e555ef41a20800000000000000
-      internalID: 3032328091733210136
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: rolling_13
       rect:
         serializedVersion: 2
-        x: 646
-        y: 5
-        width: 30
-        height: 30
+        x: 400
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -448,10 +367,10 @@ TextureImporter:
       name: rolling_14
       rect:
         serializedVersion: 2
-        x: 695
-        y: 6
-        width: 30
-        height: 29
+        x: 449
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +388,10 @@ TextureImporter:
       name: rolling_15
       rect:
         serializedVersion: 2
-        x: 743
-        y: 6
-        width: 31
-        height: 29
+        x: 499
+        y: 1
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -482,6 +401,111 @@ TextureImporter:
       bones: []
       spriteID: 7d9dc60d380e8cfd0800000000000000
       internalID: -2321358751167358505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolling_17
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 1
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec24568429acc0b0800000000000000
+      internalID: -5707000653447680791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolling_18
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 1
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705f05ef6e65bba70800000000000000
+      internalID: 8843757843381286151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolling_20
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 1
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83311c9baa0c770c0800000000000000
+      internalID: -4577978656705408200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolling_22
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd26b395524593890800000000000000
+      internalID: -7477853186884410659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rolling_23
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89607d21e546c6bd0800000000000000
+      internalID: -2635621326712797544
       vertices: []
       indices: 
       edges: []

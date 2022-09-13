@@ -20,6 +20,12 @@ TextureImporter:
   - first:
       213: 23206078353600968
     second: crouching_5
+  - first:
+      213: -5083007137775397925
+    second: crouching_7
+  - first:
+      213: -1832572150685626138
+    second: crouching_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,12 +130,12 @@ TextureImporter:
       name: crouching_0
       rect:
         serializedVersion: 2
-        x: 8
+        x: 6
         y: 0
-        width: 28
-        height: 38
+        width: 32
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,36 +148,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crouching_1
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 0
-        width: 24
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e202f88c2835864c0800000000000000
-      internalID: -4294090423522090962
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: crouching_2
       rect:
         serializedVersion: 2
-        x: 113
+        x: 57
         y: 0
-        width: 24
-        height: 32
+        width: 32
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,12 +172,12 @@ TextureImporter:
       name: crouching_3
       rect:
         serializedVersion: 2
-        x: 161
+        x: 108
         y: 0
-        width: 28
-        height: 31
+        width: 32
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -205,36 +190,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: crouching_4
-      rect:
-        serializedVersion: 2
-        x: 209
-        y: 0
-        width: 29
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1fc139e2a72e7ea30800000000000000
-      internalID: 4244610188215262449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: crouching_5
       rect:
         serializedVersion: 2
-        x: 257
+        x: 159
         y: 0
-        width: 24
-        height: 36
+        width: 32
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -242,6 +206,48 @@ TextureImporter:
       bones: []
       spriteID: 8c175e82ec1725000800000000000000
       internalID: 23206078353600968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouching_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd35f1a60f78579b0800000000000000
+      internalID: -5083007137775397925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crouching_8
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 0
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e01c1d96556196e0800000000000000
+      internalID: -1832572150685626138
       vertices: []
       indices: 
       edges: []

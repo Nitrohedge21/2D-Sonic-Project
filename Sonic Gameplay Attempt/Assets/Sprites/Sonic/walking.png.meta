@@ -74,6 +74,18 @@ TextureImporter:
   - first:
       213: -1203806322222879755
     second: walking_23
+  - first:
+      213: 8378660296390570055
+    second: walking_25
+  - first:
+      213: 411142423000485502
+    second: walking_26
+  - first:
+      213: -4735865093386381836
+    second: walking_27
+  - first:
+      213: 5775138852116121991
+    second: walking_28
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -178,12 +190,12 @@ TextureImporter:
       name: walking_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 5
-        width: 25
-        height: 38
+        x: 4
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,12 +211,12 @@ TextureImporter:
       name: walking_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 5
-        width: 24
-        height: 37
+        x: 53
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,36 +229,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 5
-        width: 35
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41cae3adbb40af890800000000000000
-      internalID: -7423615830899905516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: walking_3
       rect:
         serializedVersion: 2
-        x: 153
-        y: 7
-        width: 36
-        height: 37
+        x: 102
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,12 +253,12 @@ TextureImporter:
       name: walking_4
       rect:
         serializedVersion: 2
-        x: 202
-        y: 8
-        width: 34
-        height: 36
+        x: 151
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,12 +274,12 @@ TextureImporter:
       name: walking_5
       rect:
         serializedVersion: 2
-        x: 252
-        y: 5
-        width: 29
-        height: 38
+        x: 199
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,12 +295,12 @@ TextureImporter:
       name: walking_6
       rect:
         serializedVersion: 2
-        x: 306
-        y: 5
-        width: 25
-        height: 38
+        x: 246
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -325,12 +316,12 @@ TextureImporter:
       name: walking_7
       rect:
         serializedVersion: 2
-        x: 354
-        y: 5
-        width: 26
-        height: 37
+        x: 295
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,12 +337,12 @@ TextureImporter:
       name: walking_8
       rect:
         serializedVersion: 2
-        x: 400
-        y: 5
-        width: 35
-        height: 37
+        x: 345
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,12 +358,12 @@ TextureImporter:
       name: walking_9
       rect:
         serializedVersion: 2
-        x: 448
-        y: 7
-        width: 37
-        height: 37
+        x: 395
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -385,36 +376,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_10
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 7
-        width: 34
-        height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd1f5940f1ed2e8b0800000000000000
-      internalID: -5124289201191915044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: walking_11
       rect:
         serializedVersion: 2
-        x: 550
-        y: 5
-        width: 31
-        height: 38
+        x: 445
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,12 +400,12 @@ TextureImporter:
       name: walking_12
       rect:
         serializedVersion: 2
-        x: 600
+        x: 494
         y: 2
-        width: 25
-        height: 41
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,12 +421,12 @@ TextureImporter:
       name: walking_13
       rect:
         serializedVersion: 2
-        x: 649
+        x: 541
         y: 2
-        width: 24
-        height: 41
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -469,36 +439,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_14
-      rect:
-        serializedVersion: 2
-        x: 693
-        y: 3
-        width: 35
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86244ef2be3d32a90800000000000000
-      internalID: -7339789960609512856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: walking_15
       rect:
         serializedVersion: 2
-        x: 741
-        y: 6
-        width: 36
-        height: 37
+        x: 591
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -514,12 +463,12 @@ TextureImporter:
       name: walking_16
       rect:
         serializedVersion: 2
-        x: 790
-        y: 7
-        width: 34
-        height: 36
+        x: 641
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -535,12 +484,12 @@ TextureImporter:
       name: walking_17
       rect:
         serializedVersion: 2
-        x: 840
-        y: 4
-        width: 30
-        height: 39
+        x: 690
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -553,36 +502,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walking_18
-      rect:
-        serializedVersion: 2
-        x: 894
-        y: 2
-        width: 25
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 946ad35fc6f289b50800000000000000
-      internalID: 6600077398928893513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: walking_19
       rect:
         serializedVersion: 2
-        x: 942
+        x: 737
         y: 2
-        width: 26
-        height: 41
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -598,12 +526,12 @@ TextureImporter:
       name: walking_20
       rect:
         serializedVersion: 2
-        x: 987
-        y: 5
-        width: 36
-        height: 38
+        x: 787
+        y: 3
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -619,12 +547,12 @@ TextureImporter:
       name: walking_21
       rect:
         serializedVersion: 2
-        x: 1036
-        y: 6
-        width: 37
-        height: 37
+        x: 836
+        y: 3
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -640,12 +568,12 @@ TextureImporter:
       name: walking_22
       rect:
         serializedVersion: 2
-        x: 1088
-        y: 6
-        width: 34
-        height: 37
+        x: 884
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -661,12 +589,12 @@ TextureImporter:
       name: walking_23
       rect:
         serializedVersion: 2
-        x: 1138
-        y: 5
-        width: 31
-        height: 38
+        x: 932
+        y: 2
+        width: 40
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -674,6 +602,90 @@ TextureImporter:
       bones: []
       spriteID: 5fb298927883b4fe0800000000000000
       internalID: -1203806322222879755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_25
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 2
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7407704c52bf64470800000000000000
+      internalID: 8378660296390570055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_26
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 3
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e890bfadba4b500800000000000000
+      internalID: 411142423000485502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_27
+      rect:
+        serializedVersion: 2
+        x: 1082
+        y: 3
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5588c0ac3d64eb0800000000000000
+      internalID: -4735865093386381836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walking_28
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 3
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78940f0203a652050800000000000000
+      internalID: 5775138852116121991
       vertices: []
       indices: 
       edges: []
