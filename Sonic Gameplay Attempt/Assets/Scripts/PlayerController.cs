@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpHeight = 10f;
     [SerializeField] private float maxSpeed = 15f;
-    [SerializeField] private float minSpeed = 10f;
+    private float minSpeed = 10f;
 
     private bool isTouchingLeft;
     private bool isTouchingRight;
@@ -37,20 +37,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        directionX = Input.GetAxisRaw("Horizontal");
+        //Changed GetAxisRaws into GetAxis to get a smoother movement and slowdown.
+        directionX = Input.GetAxis("Horizontal");
      
         if((!isTouchingLeft && !isTouchingRight) || isGrounded())
         {
             rigidbody2d.velocity = new Vector2(directionX * moveSpeed, rigidbody2d.velocity.y);
             //The player gains speed over time instead of input, gonna try to figure out how to fix this.
-            if (Input.GetAxisRaw("Horizontal") != 0)
+            if (Input.GetAxis("Horizontal") != 0)
             {
                 //Added != 0 here so that i could use bool in an if statement. Thanks to logicandchaos from Unity answers.
-                moveSpeed += 0.1f;
+                moveSpeed += 0.01f;
             }
             else
             {
-                moveSpeed -= 0.1f;
+                moveSpeed -= 0.01f;
             }
             
             if(moveSpeed < minSpeed)
@@ -141,15 +142,39 @@ public class PlayerController : MonoBehaviour
     private void updateAnimations()
     {
         MovementState state;
+        //switch(state)
+        //{
 
-        if(directionX > 0f)
+        //}
+        // Might be able to use a switch case here.
+
+        if(directionX > 0f && moveSpeed <= 15f)
         {
             state = MovementState.walk;
         }
-        else if (directionX < 0f)
+        else if (directionX < 0f && moveSpeed <= 15f)
         {
             state = MovementState.walk;
         }
+
+        else if (directionX > 0f && moveSpeed <= 20f)
+        {
+            state = MovementState.buildSpeed;
+        }
+        else if (directionX < 0f && moveSpeed <= 20f)
+        {
+            state = MovementState.buildSpeed;
+        }
+
+        else if (directionX > 0f && moveSpeed <= 30f)
+        {
+            state = MovementState.running;
+        }
+        else if (directionX < 0f && moveSpeed <= 30f)
+        {
+            state = MovementState.running;
+        }
+
 
         else
         {
