@@ -21,6 +21,7 @@ public class RingCounter : MonoBehaviour
     public void ChangeScore(int RingValue)
     {
         score += RingValue;
-        text.text = "x " + score.ToString();
+        text.text = score.ToString();
+        // Removed the x part of the line above.
     }
 }
