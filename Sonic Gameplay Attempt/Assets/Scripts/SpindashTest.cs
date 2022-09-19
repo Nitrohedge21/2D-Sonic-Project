@@ -6,7 +6,7 @@ public class SpindashTest : MonoBehaviour
 {
     private Rigidbody2D rb2d;
     PlayerController playerController;
-    private float dashSpeed = 1f;
+    private float dashSpeed = 10f;
 
     void Start()
     {
@@ -28,6 +28,10 @@ public class SpindashTest : MonoBehaviour
         }
     }
 }
+
+
+//rb2d = playerController.GetComponent<Rigidbody2D>();
+//rb2d = GameObject.Find("Player").GetComponent<Rigidbody2D>();
 
 //rb2d.GetComponent<PlayerController>.isGrounded();
 //playerController = rb2d.GetComponent<PlayerController>();

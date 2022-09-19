@@ -6,7 +6,7 @@ public class ItemCollector : MonoBehaviour
 {
     private enum AnimState {spin, collect};
     private Animator anim;
-    [SerializeField]private int ringCount;
+    private int ringCount;
     int RingValue = 1;
     
     // Start is called before the first frame update
@@ -18,6 +18,10 @@ public class ItemCollector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ringCount < 0)
+        {
+            ringCount = 0;
+        }
         //UpdateAnimations();
     }
 

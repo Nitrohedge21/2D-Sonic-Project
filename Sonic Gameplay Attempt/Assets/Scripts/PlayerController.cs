@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
     private BoxCollider2D boxCollider2d;
+    private CircleCollider2D circleCollider2d;
     float directionX;
     UpdateAnimations animUpdate;
     // Animation stuff
@@ -30,8 +31,11 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         boxCollider2d = GetComponent<BoxCollider2D>();
+        circleCollider2d = GetComponent<CircleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        circleCollider2d.enabled = !circleCollider2d.enabled;
     }
 
     // Update is called once per frame
@@ -51,7 +55,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                moveSpeed -= 0.01f;
+                moveSpeed -= 0.1f;
             }
             
             if(moveSpeed < minSpeed)
@@ -69,6 +73,7 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
         }
+
 
         // If you ever change the box collider of the player, adjust the x float value of the new vector2s.
         isTouchingLeft = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x - 0.5f, gameObject.transform.position.y), new Vector2(0.5f, 0.9f), 0f, jumpableGround);
@@ -123,6 +128,7 @@ public class PlayerController : MonoBehaviour
         {
             rayColor = Color.red;
         }
+      
         Debug.DrawRay(boxCollider2d.bounds.center, Vector2.down * (boxCollider2d.bounds.extents.y + extraHeightText), rayColor);
         //Debug.Log(raycastHit.collider);
         return raycastHit.collider != null;
@@ -148,29 +154,29 @@ public class PlayerController : MonoBehaviour
         //}
         // Might be able to use a switch case here.
 
-        if(directionX > 0f && moveSpeed <= 15f)
+        if(directionX > 0f && moveSpeed <= 11f)
         {
             state = MovementState.walk;
         }
-        else if (directionX < 0f && moveSpeed <= 15f)
+        else if (directionX < 0f && moveSpeed <= 11f)
         {
             state = MovementState.walk;
+        }
+
+        else if (directionX > 0f && moveSpeed <= 12f)
+        {
+            state = MovementState.buildSpeed;
+        }
+        else if (directionX < 0f && moveSpeed <= 12f)
+        {
+            state = MovementState.buildSpeed;
         }
 
         else if (directionX > 0f && moveSpeed <= 20f)
         {
-            state = MovementState.buildSpeed;
-        }
-        else if (directionX < 0f && moveSpeed <= 20f)
-        {
-            state = MovementState.buildSpeed;
-        }
-
-        else if (directionX > 0f && moveSpeed <= 30f)
-        {
             state = MovementState.running;
         }
-        else if (directionX < 0f && moveSpeed <= 30f)
+        else if (directionX < 0f && moveSpeed <= 20f)
         {
             state = MovementState.running;
         }
@@ -205,10 +211,39 @@ public class PlayerController : MonoBehaviour
         {
             state = MovementState.crouch;
         }
+
+        if(!isGrounded() && state != MovementState.jump && state != MovementState.inAir)
+        {
+            state = MovementState.diving;
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && moveSpeed > 13f && isGrounded())
+        {
+            boxCollider2d.enabled = false;
+            circleCollider2d.enabled = true;
+            state = MovementState.roll;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && moveSpeed > 13f && !isGrounded())
+        {
+            boxCollider2d.enabled = true;
+            circleCollider2d.enabled = false;
+        }
+
         anim.SetInteger("state",(int)state);
     }
-}
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Badniks"))
+        {
+            Debug.Log("Sonic got hit by the badnik");
+            //ringCount = ringCount - 5;
+            //Need to find a way to reference this so that sonic loses rings.
+        }
+    }
+
+
+}
 // isGrounded using Raycast
 /*
 float extraHeightText = .5f;
