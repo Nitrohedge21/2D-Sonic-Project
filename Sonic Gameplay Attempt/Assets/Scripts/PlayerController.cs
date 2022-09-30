@@ -26,7 +26,9 @@ public class PlayerController : MonoBehaviour
     private bool wallJumping;
     private float touchingLeftOrRight;
     bool facingRight = true;
-    
+    //[HideInInspector]  //THIS WAS A DUMB THING TO DO BECAUSE I STILL HAVE TO ASSIGN IT IN THE INSPECTOR GRAHHHHHHHHHHHHHHHH
+    public ItemCollector script;
+
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -236,10 +238,23 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Badniks"))
         {
-            Debug.Log("Sonic got hit by the badnik");
-            //ringCount = ringCount - 5;
-            //Need to find a way to reference this so that sonic loses rings.
+            int Temp = script.RingCount;
+
+            ItemCollector.instance.UpdateRingCount(-1);
+            
+            Debug.Log("ring decreased");
+
+            
+
         }
+
+        //if (other.gameObject.CompareTag("Badniks"))
+        //{
+        //    Debug.Log("Sonic got hit by the badnik");
+        //    //ringCount = ringCount - 5;
+        //    //Need to find a way to reference this so that sonic loses rings.
+        //}
+
     }
 
 

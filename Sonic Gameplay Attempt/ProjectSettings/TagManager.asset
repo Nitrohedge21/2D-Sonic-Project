@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Badniks
   - Ground
+  - Rings
   layers:
   - Default
   - TransparentFX
