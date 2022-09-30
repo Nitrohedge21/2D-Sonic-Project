@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SpindashTest : MonoBehaviour
 {
-    private Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
     PlayerController playerController;
-    private float dashSpeed = 10f;
+    [SerializeField] private float dashSpeed;
 
     void Start()
     {
-        playerController = GetComponent<PlayerController>();
-        rb2d = playerController.GetComponent<Rigidbody2D>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     // Changed the isGrounded function to public to be able to access it in here.
@@ -19,9 +18,9 @@ public class SpindashTest : MonoBehaviour
     void Update()
     {
      
-        if(/*Input.GetKeyDown(KeyCode.DownArrow) &&*/ Input.GetKeyDown(KeyCode.Z) &&playerController.isGrounded())
+        if (Input.GetKeyDown(KeyCode.DownArrow) /*&& Input.GetKeyDown(KeyCode.Z)*/ /*&& rb2d.GetComponent<PlayerController>().isGrounded*/)
         {
-            rb2d.AddForce(transform.forward* dashSpeed);
+            rb2d.AddForce(transform.right* dashSpeed);
             //The line above is not working because i can't reference the object's instance properly.
             Debug.Log("Spindash input test");
             

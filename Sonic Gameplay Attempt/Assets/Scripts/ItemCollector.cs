@@ -26,7 +26,7 @@ public class ItemCollector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ringCount < 0)
+        if(ringCount <= 0)
         {
             ringCount = 0;
         }
@@ -42,10 +42,10 @@ public class ItemCollector : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         // change this part so that the player has the script rather than the rings
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Rings"))
         {
             ItemCollector.instance.UpdateRingCount(1);
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 
@@ -56,7 +56,7 @@ public class ItemCollector : MonoBehaviour
     }
     public void UpdateRingCount(int value)
     {
-        ringCount = ringCount + value;
+        ringCount += value;
         ChangeScore(ringCount);
     }
    

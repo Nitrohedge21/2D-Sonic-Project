@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider2d;
     private CircleCollider2D circleCollider2d;
     float directionX;
-    UpdateAnimations animUpdate;
     // Animation stuff
     private Animator anim;
     private enum MovementState { standing, idleStart, idle, walk, buildSpeed, running, jump, roll, crouch, dead, drown, getHit, inAir,diving, lookUp,push, slowDown, turnLeft}
@@ -27,7 +26,8 @@ public class PlayerController : MonoBehaviour
     private float touchingLeftOrRight;
     bool facingRight = true;
     //[HideInInspector]  //THIS WAS A DUMB THING TO DO BECAUSE I STILL HAVE TO ASSIGN IT IN THE INSPECTOR GRAHHHHHHHHHHHHHHHH
-    public ItemCollector script;
+    public ItemCollector CollectorScript;
+    MovementState state;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
         circleCollider2d = GetComponent<CircleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-
+        
         circleCollider2d.enabled = !circleCollider2d.enabled;
     }
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Jump") && (isTouchingRight || isTouchingLeft) && !isGrounded())
         {
             wallJumping = true;
-            Invoke(nameof(setJump2False), 0.08f);
+            Invoke(nameof(SetJump2False), 0.08f);
         }
 
         if(wallJumping)
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             rigidbody2d.velocity = new Vector2(moveSpeed * touchingLeftOrRight, jumpHeight);
         }
 
-        updateAnimations();
+        UpdateAnimations();
     }
 
     public bool isGrounded()
@@ -136,7 +136,7 @@ public class PlayerController : MonoBehaviour
         return raycastHit.collider != null;
 
     }
-    void setJump2False()
+    void SetJump2False()
     {
         wallJumping = false;
     }
@@ -147,9 +147,9 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0, 180, 0);
     }
 
-    private void updateAnimations()
+    private void UpdateAnimations()
     {
-        MovementState state;
+        //MovementState state;      //Moved this to the first lines with variables and stuff so that I can access it anywhere.
         //switch(state)
         //{
 
@@ -238,12 +238,14 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Badniks"))
         {
-            int Temp = script.RingCount;
+            state = MovementState.getHit;
+            //The state above does not work for some reason. Gonna have to fix this somehow.
+            int Temp = CollectorScript.RingCount;
 
             ItemCollector.instance.UpdateRingCount(-1);
             
             Debug.Log("ring decreased");
-
+            
             
 
         }

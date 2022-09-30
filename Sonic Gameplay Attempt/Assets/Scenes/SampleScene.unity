@@ -182,7 +182,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!4 &10053429 stripped
 Transform:
@@ -248,7 +249,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!4 &39388282 stripped
 Transform:
@@ -1029,7 +1031,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!1 &519420028
 GameObject:
@@ -1412,7 +1415,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!4 &662707058 stripped
 Transform:
@@ -1800,7 +1804,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!4 &886346865 stripped
 Transform:
@@ -2510,7 +2515,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!4 &1103496308 stripped
 Transform:
@@ -2642,7 +2648,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!1 &1266597214
 GameObject:
@@ -2704,6 +2711,7 @@ GameObject:
   - component: {fileID: 1519406046}
   - component: {fileID: 1519406045}
   - component: {fileID: 1519406049}
+  - component: {fileID: 1519406051}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2813,7 +2821,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpHeight: 10
   maxSpeed: 20
-  script: {fileID: 1266597215}
+  CollectorScript: {fileID: 1266597215}
 --- !u!61 &1519406047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2868,11 +2876,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519406042}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0dd503e20cd8ff84583cd7aa0a9c488d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb2d: {fileID: 1519406048}
+  dashSpeed: 2500
 --- !u!58 &1519406050
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2889,6 +2899,19 @@ CircleCollider2D:
   m_Offset: {x: 0.0073285103, y: -0.058628798}
   serializedVersion: 2
   m_Radius: 0.94952655
+--- !u!114 &1519406051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519406042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d70ea28aed2ac04e986554558a98ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 895275332}
 --- !u!1 &1640731000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,7 +3373,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
 --- !u!1 &1978444628
 GameObject:
@@ -3459,5 +3483,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rings
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6610603598030641703, guid: 12806478de8dc644baf3830723a4164f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 12806478de8dc644baf3830723a4164f, type: 3}
