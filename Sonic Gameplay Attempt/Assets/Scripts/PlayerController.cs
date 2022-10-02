@@ -239,27 +239,19 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Badniks"))
         {
-            state = MovementState.getHit;
-            //The state above does not work for some reason. Gonna have to fix this somehow.
+            //state = MovementState.getHit;
+            //I honestly don't know why the fuck it doesn't work when i do it like the line above??????
+            anim.Play("GettingHit");
+
             int Temp = CollectorScript.RingCount;
 
             ItemCollector.instance.UpdateRingCount(-1);
             
             Debug.Log("ring decreased");
 
-
-            anim.SetInteger("state", (int)state);
         }
 
-        //if (other.gameObject.CompareTag("Badniks"))
-        //{
-        //    Debug.Log("Sonic got hit by the badnik");
-        //    //ringCount = ringCount - 5;
-        //    //Need to find a way to reference this so that sonic loses rings.
-        //}
-
     }
-
 
 }
 // isGrounded using Raycast
@@ -314,4 +306,14 @@ if (Input.GetKeyDown(KeyCode.D))
 {
     transform.Rotate(0, 0, 0);
 }
+*/
+
+//random shit that were changed or cut
+/*
+//if (other.gameObject.CompareTag("Badniks"))
+//{
+//    Debug.Log("Sonic got hit by the badnik");
+//    //ringCount = ringCount - 5;
+//    //Need to find a way to reference this so that sonic loses rings.
+//}
 */

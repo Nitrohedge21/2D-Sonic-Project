@@ -1337,6 +1337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goalpost(WIP)
       objectReference: {fileID: 0}
+    - target: {fileID: 5734394831474611053, guid: 5c60349ab952d154c8f8234e883cce24, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5734394831474611056, guid: 5c60349ab952d154c8f8234e883cce24, type: 3}
       propertyPath: m_RootOrder
       value: 11
