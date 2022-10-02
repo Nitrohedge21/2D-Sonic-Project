@@ -36,8 +36,8 @@ public class PlayerController : MonoBehaviour
         circleCollider2d = GetComponent<CircleCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        
-        circleCollider2d.enabled = !circleCollider2d.enabled;
+
+        circleCollider2d.enabled = false;
     }
 
     // Update is called once per frame
@@ -197,6 +197,7 @@ public class PlayerController : MonoBehaviour
         else if(rigidbody2d.velocity.y < -.1f && !isGrounded())
         {
             state = MovementState.diving;
+            //Changed this to inAir but this part still needs work.
         }
 
         if(isTouchingLeft && isGrounded()/* && Input.GetKeyDown(KeyCode.LeftArrow)*/)
@@ -245,9 +246,9 @@ public class PlayerController : MonoBehaviour
             ItemCollector.instance.UpdateRingCount(-1);
             
             Debug.Log("ring decreased");
-            
-            
 
+
+            anim.SetInteger("state", (int)state);
         }
 
         //if (other.gameObject.CompareTag("Badniks"))

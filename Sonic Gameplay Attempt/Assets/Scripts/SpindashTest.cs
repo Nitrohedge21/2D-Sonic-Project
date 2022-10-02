@@ -17,13 +17,13 @@ public class SpindashTest : MonoBehaviour
     // tried making it protected but couldn't figure out how to access it.
     void Update()
     {
-     
-        if (Input.GetKeyDown(KeyCode.DownArrow) /*&& Input.GetKeyDown(KeyCode.Z)*/ /*&& rb2d.GetComponent<PlayerController>().isGrounded*/)
+
+        if (/*Input.GetKeyDown(KeyCode.DownArrow) && */Input.GetKeyDown(KeyCode.Z) && rb2d.GetComponent<PlayerController>().isGrounded())
         {
             rb2d.AddForce(transform.right* dashSpeed);
-            //The line above is not working because i can't reference the object's instance properly.
+            //The line above is not working now because i was told how to reference the rb2d properly.
             Debug.Log("Spindash input test");
-            
+            //This code could be used for chaos control if I were to create shadow gameplay script. Just get rid of the isgrounded part if that ever happens.
         }
     }
 }
