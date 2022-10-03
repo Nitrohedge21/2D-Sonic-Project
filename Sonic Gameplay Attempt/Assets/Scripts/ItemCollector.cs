@@ -13,6 +13,7 @@ public class ItemCollector : MonoBehaviour
     public static ItemCollector instance;
     public TextMeshProUGUI text;
     int score;
+    [SerializeField] private AudioSource CollectFX;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +47,7 @@ public class ItemCollector : MonoBehaviour
         {
             ItemCollector.instance.UpdateRingCount(1);
             Destroy(other.gameObject);
+            CollectFX.Play();
         }
     }
 

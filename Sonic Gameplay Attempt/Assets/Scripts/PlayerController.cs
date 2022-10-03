@@ -20,6 +20,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float maxSpeed = 15f;
     private float minSpeed = 10f;
 
+    [Header("SFX")]
+    [SerializeField] private AudioSource JumpFX;
+    [SerializeField] private AudioSource RollFX;
+    //Might add more sfx later.
+
     private bool isTouchingLeft;
     private bool isTouchingRight;
     private bool wallJumping;
@@ -74,6 +79,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded() && Input.GetButtonDown("Jump"))
         {
             rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
+            JumpFX.Play();
         }
 
 
@@ -94,6 +100,7 @@ public class PlayerController : MonoBehaviour
         {
             wallJumping = true;
             Invoke(nameof(SetJump2False), 0.08f);
+            JumpFX.Play();
         }
 
         if(wallJumping)
@@ -225,6 +232,7 @@ public class PlayerController : MonoBehaviour
             boxCollider2d.enabled = false;
             circleCollider2d.enabled = true;
             state = MovementState.roll;
+            RollFX.Play();
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow) && moveSpeed > 13f && !isGrounded())
         {
