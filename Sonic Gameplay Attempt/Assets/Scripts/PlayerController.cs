@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private enum MovementState { standing, idleStart, idle, walk, buildSpeed, running, jump, roll, crouch, dead, drown, getHit, inAir,diving, lookUp,push, slowDown, turnLeft}
     private SpriteRenderer sprite;
+    RaycastHit2D raycastHit;
 
     [Header("Required Stuff")]
     [SerializeField] private LayerMask jumpableGround;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [Header("SFX")]
     [SerializeField] private AudioSource JumpFX;
     [SerializeField] private AudioSource RollFX;
+    [SerializeField] private AudioSource DmgFX;
     //Might add more sfx later.
 
     private bool isTouchingLeft;
@@ -78,8 +80,12 @@ public class PlayerController : MonoBehaviour
         // Putting isGrounded after the input makes the ray not show up for some reason.
         if (isGrounded() && Input.GetButtonDown("Jump"))
         {
+            //boxCollider2d.enabled = false;
+            //circleCollider2d.enabled = true;
+            //This does what i want to do but now i need to make it revert back after it hits the ground.
             rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, jumpHeight);
             JumpFX.Play();
+
         }
 
 
@@ -117,7 +123,7 @@ public class PlayerController : MonoBehaviour
         // Got this part from coding monkey
 
         float extraHeightText = .5f;
-        RaycastHit2D raycastHit = Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + extraHeightText, jumpableGround);
+        raycastHit = Physics2D.Raycast(boxCollider2d.bounds.center, Vector2.down, boxCollider2d.bounds.extents.y + extraHeightText, jumpableGround);
 
         if(directionX < 0 && facingRight)
         {
@@ -234,7 +240,7 @@ public class PlayerController : MonoBehaviour
             state = MovementState.roll;
             RollFX.Play();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && moveSpeed > 13f && !isGrounded())
+        else if (Input.GetKeyDown(KeyCode.DownArrow) /*&& moveSpeed > 13f*/ && !isGrounded())
         {
             boxCollider2d.enabled = true;
             circleCollider2d.enabled = false;
@@ -256,9 +262,15 @@ public class PlayerController : MonoBehaviour
             ItemCollector.instance.UpdateRingCount(-1);
             
             Debug.Log("ring decreased");
+            DmgFX.Play();
 
         }
 
+        if(other.gameObject.CompareTag("Ground") && state != MovementState.roll )
+        {
+            boxCollider2d.enabled = true;
+            circleCollider2d.enabled = false;
+        }
     }
 
 }
@@ -324,4 +336,15 @@ if (Input.GetKeyDown(KeyCode.D))
 //    //ringCount = ringCount - 5;
 //    //Need to find a way to reference this so that sonic loses rings.
 //}
+*/
+
+
+// testing collider stuff
+/*
+//if (raycastHit)
+{
+    inAir = false;
+    boxCollider2d.enabled = true;
+    circleCollider2d.enabled = false;
+}
 */
